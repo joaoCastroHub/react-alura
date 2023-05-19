@@ -1,6 +1,6 @@
 import './Banner.css'
 
-function Banner() {
+const Banner = () => {
     return (
         //JSX parece html mas não é, react interpreta e aplica no DOM
         <header className="banner">

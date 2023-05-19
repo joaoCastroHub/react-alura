@@ -1,9 +1,11 @@
-import Banner from "./componentes/banner/Banner.js";
+import Banner from "./componentes/banner";
+import Form from "./componentes/form";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Banner />
+      <Form />
     </div>
   );
 }
