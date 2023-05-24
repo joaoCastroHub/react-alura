@@ -2,6 +2,7 @@ import './Form.css';
 import TextField from "../TextField";
 import SelectList from '../SelectList';
 import Button from '../button';
+import { useState } from 'react';
 
 const Form = () => {
 
@@ -15,19 +16,23 @@ const Form = () => {
         'Magi'
     ];
 
+    const [nome, setNome] = useState('');
+    const [cargo, setCargo] = useState('');
+    const [imagem, setImagem] = useState('');
+    const [time, setTime] = useState('');
+
     const onSaving = (event) => {
         event.preventDefault();
-        console.log('Form foi submetido');
     }
 
     return (
         <section className="formulario">
             <form onSubmit={onSaving}>
                 <h2>Preencha os dados para criar o card do jogador</h2>
-                <TextField fieldRequired={true} label="Nome" placeholder="Digite seu nome" />
-                <TextField ieldRequired={true} label="Cargo" placeholder="Digite seu cargo" />
-                <TextField label="Imagem" placeholder="Digite o endereço da imagem" />
-                <SelectList ieldRequired={true} label="Times" itens={times} />
+                <TextField inputValue={nome} onChanged={inputValue => setNome(inputValue)} fieldRequired={true} label="Nome" placeholder="Digite seu nome" />
+                <TextField inputValue={cargo} onChanged={inputValue => setCargo(inputValue)} ieldRequired={true} label="Cargo" placeholder="Digite seu cargo" />
+                <TextField inputValue={imagem} onChanged={inputValue => setImagem(inputValue)} label="Imagem" placeholder="Digite o endereço da imagem" />
+                <SelectList inputValue={time} onChanged={inputValue => setTime(inputValue)} fieldRequired={true} label="Times" itens={times} />
                 <Button>
                     Criar card
                 </Button>

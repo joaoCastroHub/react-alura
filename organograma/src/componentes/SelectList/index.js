@@ -4,7 +4,7 @@ const SelectList = (props) => {
     return (
         <div className='lista'>
             <label>{props.label}</label>
-            <select required={props.fieldRequired}>
+            <select onChange={event => props.onChanged(event.target.value)} required={props.fieldRequired} value={props.InputValue}>
                 {props.itens.map(item => {
                     return <option key={item}>{item}</option>
                 })}
