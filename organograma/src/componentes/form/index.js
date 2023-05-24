@@ -4,7 +4,7 @@ import SelectList from '../SelectList';
 import Button from '../button';
 import { useState } from 'react';
 
-const Form = () => {
+const Form = (props) => {
 
     const times = [
         'steven Universo',
@@ -23,6 +23,12 @@ const Form = () => {
 
     const onSaving = (event) => {
         event.preventDefault();
+        props.onColaboradorRegistered({
+            nome,
+            cargo,
+            imagem,
+            time
+        });
     }
 
     return (
