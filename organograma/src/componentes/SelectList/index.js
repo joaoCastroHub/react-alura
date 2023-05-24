@@ -4,11 +4,10 @@ const SelectList = (props) => {
     return (
         <div className='lista'>
             <label>{props.label}</label>
-            <select>
+            <select required={props.fieldRequired}>
                 {props.itens.map(item => {
                     return <option key={item}>{item}</option>
                 })}
-                <option></option>
             </select>
         </div>
     );
