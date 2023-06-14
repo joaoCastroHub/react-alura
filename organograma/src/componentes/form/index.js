@@ -1,7 +1,7 @@
 import './Form.css';
 import TextField from "../TextField";
 import SelectList from '../SelectList';
-import Button from '../button';
+import Button from '../Button';
 import { useState } from 'react';
 
 const Form = (props) => {
