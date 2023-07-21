@@ -48,7 +48,7 @@ const App = () => {
   return (
     <div className="App">
       <Banner />
-      <Form onColaboradorRegistered={colaborador => onNewColaboradorAdded(colaborador)} />
+      <Form times={times.map(time => time.name)} onColaboradorRegistered={colaborador => onNewColaboradorAdded(colaborador)} />
       {times.map(team => <Team key={team.name} name={team.name} primaryColor={team.primaryColor} secondaryColor={team.secondaryColor} />)}
 
     </div>

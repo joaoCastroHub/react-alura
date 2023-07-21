@@ -6,16 +6,6 @@ import { useState } from 'react';
 
 const Form = (props) => {
 
-    const times = [
-        'steven Universo',
-        'pokemon',
-        'Canon Busters',
-        'Sakura Card Captors',
-        'Hamtaro',
-        'Digimon',
-        'Magi'
-    ];
-
     const [nome, setNome] = useState('');
     const [cargo, setCargo] = useState('');
     const [imagem, setImagem] = useState('');
@@ -38,7 +28,7 @@ const Form = (props) => {
                 <TextField inputValue={nome} onChanged={inputValue => setNome(inputValue)} fieldRequired={true} label="Nome" placeholder="Digite seu nome" />
                 <TextField inputValue={cargo} onChanged={inputValue => setCargo(inputValue)} ieldRequired={true} label="Cargo" placeholder="Digite seu cargo" />
                 <TextField inputValue={imagem} onChanged={inputValue => setImagem(inputValue)} label="Imagem" placeholder="Digite o endereço da imagem" />
-                <SelectList inputValue={time} onChanged={inputValue => setTime(inputValue)} fieldRequired={true} label="Times" itens={times} />
+                <SelectList inputValue={time} onChanged={inputValue => setTime(inputValue)} fieldRequired={true} label="Times" itens={props.times} />
                 <Button>
                     Criar card
                 </Button>
